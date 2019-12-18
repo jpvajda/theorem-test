@@ -14,7 +14,7 @@ Their customers have been asking for some changes to the site. Currently searchi
 # User Feedback
 
 ```
-this section is to highlight direct user feedback and should help inform the overall user experience.
+This section is to highlight direct user feedback and should help inform the overall user experience.
 ```
 
 **Users say** they want to just “type medium into the keyword bar and be able to easily
