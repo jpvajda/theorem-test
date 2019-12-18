@@ -13,6 +13,10 @@ Their customers have been asking for some changes to the site. Currently searchi
 
 # User Feedback
 
+```
+this section is to highlight direct user feedback and should help inform the overall user experience.
+```
+
 **Users say** they want to just “type medium into the keyword bar and be able to easily
 select the medium tempo”.
 
@@ -26,7 +30,7 @@ select the medium tempo”.
 
 ## DataBase 
 
-1. The existing Database should change and there should be no change to DB schemas, DB software or DB design for this project. If at any point a Database change is required to move forward please raise that discussion to the PM team for evaluation. 
+1. The existing Database should not change and there should be no change to DB schemas, DB software or DB design for this project. If at any point a Database change is required to move forward please raise that discussion to the PM team for evaluation. 
 
 ## Search & Filter API
 
@@ -34,16 +38,20 @@ select the medium tempo”.
 
 2. Search query parameters would be added to the URL such as `/search/music/?movie_title=title%of%movie&composer=first&last` which result in filtering of the data.   
 
-2. These existing search query parameters are currently in use by the UI's existing `UI Search Selectors`: radio buttons,  text fields and check box fields. This functionality should not change. This project will need to address the use of both a search selector and manual entry in the search bar field and combine those filters to return the proper search result.s
+2. Legacy search query parameters are currently in use by the UI's existing `UI Search Selectors`: e.g. radio buttons,  text fields and check box fields. This functionality should not change. This project will need to address the use of both a UI search selector and manual entry in the search bar field and combine those filters to return the proper search results.
 
 3. Search should also support a URI parameter such as `/search/music/{ID}` to allow searching the unique DB identifer of `ID`. 
 
 3. All search filters should be subtractive in nature (current functionality) and only show results for each matching filter applied sequentially. 
 
-4. Data should be returned in JSON to the UI. (current functionality). and displayed accordingly following the current results based on the returned JSON key value pairs. [Sample JSON](sample.json)
+4. Data should be returned in JSON to the UI for processing. (current functionality). and displayed accordingly with current results displaying JSON key value pairs. [Sample JSON](sample.json)
 
 
 ### Search Parameters
+
+```
+Below are the current parameters available to users for search.
+```
 
 | Parameter |  meaning |type and limitations |
 |---|---|---|
@@ -60,7 +68,7 @@ select the medium tempo”.
 
 ## UI / UX 
 
-1. When a user has selected search criteria via the `UI Search Selectors`, the `Search Bar Field` should populate with the search parameters and be a visual indicator to the end users that they have applied these parameters to the search query. 
+1. When a user has selected search criteria via the `UI Search Selectors`, the `Search Bar Field` should populate with the search parameters and be a visual indicator to the end users that they have applied these parameters to the search query. (see prototype for example).
 
 2. Users can manually enter in search parameters in the `Search Bar Field`. 
 
@@ -88,15 +96,21 @@ select the medium tempo”.
 
 ## Assumptions & Clarifications 
 
-1. It sounds as if this search feature is needed to be supported, need to clarify this requirement. 
+```
+This section documents assumptions being made and clarifications needed at the time this document was written. These items will be address during the early stages of development.
+``` 
+
+1. It sounds as if an Approximate search feature may need to be supported, need to clarify this requirement. 
 
  `Approximate Search` - search should support approximate string matching in the case of the parameters that are string values, e.g instrument group, instruments, composer, track title, movie title, tempo (name).  In order to support approximate search, the following changes may need to be made: 
 
  2. Are instrument groups with `/` in them, arrays or are they strings? Changing to an array type, would improve search capabilities, is this something they want to address? 
 
- 3. The DB column names are inconsistent some columns use `,` some are camel case, is this something they want to address?  
+ 3. The DB column names are inconsistent some columns use `,` some are camel case, is this something they want to address?  -- Why the inconsistency? 
 
- 4. Need to confirm limits on data types. All limits defined are just assumptions.
+ 4. Need to confirm limits on data types. All limits defined above are just assumptions based on best practices.
 
  5. Can we take this opportunity to improve how search results are visualized when returned to improve
  the overall user experience with this enhanced search feature? 
+
+ 6. It's assumed that the front end is built in a reactive frontend framework, need to confirm. 
