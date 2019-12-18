@@ -75,7 +75,15 @@ select the medium tempo”.
 6. `Search Count` A reactive count of results should always be return when each search query is applied. 
 
 
-## Prototypes 
+## UI Prototypes 
+
+[Prototype 1](images/prototype1.png) shows the search auto complete user experience and search parameter visual indicators. 
+
+![Prototype 1 image](images/prototype1.png)
+
+[Prototype 2](images/prototype2.png) shows improved search results experience and search parameter visual indicators.
+
+![Prototype 2 image](images/prototype2.png)
 
 
 ## Assumptions & Clarifications 
