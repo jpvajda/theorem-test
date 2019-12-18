@@ -66,13 +66,13 @@ select the medium tempo”.
 
 5. `Exact Search` - search parameters need to match existing database fields If a manually entered parameter doesn't match the existing parameters, show an error in the UI: ` No Matches. Invalid Search Parameter`. 
 
-3. `Exact Search` When parameters are entered and they match existing database fields, show the parameter in a visual way such as with a highlighted box around the search parameter. (see prototype for example). When a parameter is added the results should return accordingly. The User shouldn't need to refresh their screen to see the new results, the data should be reactive in nature. 
+3. `Exact Search` When parameters are entered and they match existing database fields, show the parameter in a visual way such as with a highlighted box around the search parameter. (see prototype for example). When a parameter is added the results should return accordingly. The User shouldn't need to refresh their screen to see the new results, the UI data should be reactive in nature. 
 
-3. `Exact Search Auto Complete` auto-complete should be provided to the user for exact search entries when a set of characters match a search parameter, prompt the user to auto complete the entry. 
+3. `Exact Search Auto Complete` auto-complete options should be provided to the user for exact search entries when a set of characters (min 3) match a exact search parameter, then prompt the user to auto complete the entry. 
 
-4. `Search Parameter Removal` A user can easily remove a search parameter by selecting an X on the highlighted search parameter box. When clicking X, the parameter is removed and the results should return accordingly.  The User shouldn't need to refresh their screen to see the new results, the data should be reactive in nature. 
+4. `Search Parameter Removal` A user can easily remove a search parameter by selecting an X on the highlighted search parameter box. When clicking X, the parameter is removed and the results should return accordingly.  The User shouldn't need to refresh their screen to see the new results, the UI data should be reactive in nature. 
 
-6. `Search Count` A reactive count of results should always be return with each search query. 
+6. `Search Count` A reactive count of results should always be return when each search query is applied. 
 
 
 ## Prototypes 
@@ -88,4 +88,7 @@ select the medium tempo”.
 
  3. The DB column names are inconsistent some columns use `,` some are camel case, is this something they want to address?  
 
- 4. Need to confirm limits on data types. 
+ 4. Need to confirm limits on data types. All limits defined are just assumptions.
+
+ 5. Can we take this opportunity to improve how search results are visualized when returned to improve
+ the overall user experience with this enhanced search feature? 
